@@ -7,7 +7,7 @@
   Version: 2.2.0
 
 - Class: text
-  Output: "Residuals. (Slides for this and other Data Science courses may be found at github https://github.com/DataScienceSpecialization/courses. If you care to use them, they must be downloaded as a zip file and viewed locally. This lesson corresponds to Regression_Models/01_02_linearRegression.)"
+  Output: "Residuals. (Slides for this and other Data Science courses may be found at github https://github.com/DataScienceSpecialization/courses. If you care to use them, they must be downloaded as a zip file and viewed locally. This lesson corresponds to Regression_Models/01_03_ols. Galton data is from John Verzani's website, http://wiener.math.csi.cuny.edu/UsingR/)"
 
 - Class: text
   Output: This lesson will focus on the residuals, the distances between the actual children's heights and the estimates given by the regression line. Since all lines are characterized by two parameters, a slope and an intercept, we'll use the least squares criteria to provide two equations in two unknowns so we can solve for these parameters, the slope and intercept.
@@ -19,7 +19,7 @@
 - Class: cmd_question
   Output: We'll demonstrate these concepts now. First regenerate the regression line and call it fit. Use the R function lm. Recall that by default its first argument is a formula such as "child ~ parent" and its second is the dataset, in this case galton. 
   CorrectAnswer: fit <- lm(child ~ parent, galton)
-  AnswerTests: omnitest(correctExpr='fit <- lm(child ~ parent, galton)')
+  AnswerTests: creates_lm_model('fit <- lm(child ~ parent, galton)')
   Hint: Type "fit <- lm(child ~ parent, galton)" at the R prompt.
 
 - Class: cmd_question
@@ -141,7 +141,7 @@
 - Class: cmd_question
   Output: Generate the regression line for this data. Type efit <- lm(accel ~ mag+dist, attenu) at the R prompt.
   CorrectAnswer: efit <- lm(accel ~ mag+dist, attenu)
-  AnswerTests: omnitest(correctExpr='efit <- lm(accel ~ mag+dist, attenu)')
+  AnswerTests: creates_lm_model('efit <- lm(accel ~ mag+dist, attenu)')
   Hint: Type "efit <- lm(accel ~ mag+dist, attenu)" at the R prompt.
 
 - Class: cmd_question
